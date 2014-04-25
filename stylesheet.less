@@ -78,6 +78,8 @@ html, body {
 	line-height:@font-swatch5-line-height;
 	letter-spacing: @font-swatch5-letter-spacing;
 	font-size: @font-swatch5-font-size;
+	
+	-webkit-font-smoothing: antialiased;
 }
 
 h1 {
@@ -104,6 +106,17 @@ h2 {
 	line-height:@font-swatch2-line-height; 
 	letter-spacing: @font-swatch2-letter-spacing; 
 	font-size: @font-swatch2-font-size;
+	
+	position: relative;
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		height: 4px;
+		width: 35px;
+		background: @font-swatch2-color;
+	}
 	a {
 		font-family:@font-swatch2-font-family; 
 		font-weight: @font-swatch2-font-weight; 
@@ -268,7 +281,6 @@ button.btn,
 .widget.ecomcheckout .checkout-order-button {
 	display: inline-block;
 	cursor: pointer;
-	border: 1px solid @borders-buttons;
 	background-color: @font-swatch7-background-color;
 	-webkit-appearance: none;
 	font-family:@font-swatch7-font-family;
@@ -385,23 +397,6 @@ input[type="search"]::-webkit-search-decoration {
 	display: none;
 }
 
-.template-footer .widget.profile .bk-profile-socialicons span {
-	background-color: @color-swatch3;
-	margin-right: 5px;
-	a {
-		background-color: @color-swatch3;
-		margin: 0;
-	}
-}
-
-.template-footer {
-	h3 {
-		border-bottom: 1px solid @borders-blocks;
-		padding-bottom: 1px;
-		margin-bottom: 10px;
-	}
-}
-
 .widget.tweet a,
 .widget.paypalbuynow .widget.button.paypal,
 .widget.dropbox button {
@@ -417,10 +412,11 @@ input[type="search"]::-webkit-search-decoration {
 .template-header {
 	padding-top: 30px;
 	background-color: @color-swatch7;
+	border-top: 15px solid @color-swatch2;
 }
 
-.widget.companyname {
-	padding: 6px 12px 7px;
+.header-main {
+	padding: 30px 0;
 }
 
 .widget.logo {
@@ -433,17 +429,17 @@ input[type="search"]::-webkit-search-decoration {
 	}
 }
 
-.header-twitter {
-	text-align: right;
+.keyline {
+	border-bottom: 1px solid darken(@color-swatch1, 5%);
 }
 
 .widget.feature {
-	text-align: center;
+	text-align: right;
 	h2, h3 {
 		color: @color-swatch1;
 		text-shadow: 0 0 10px fadeout(@color-swatch5, 50%);
 		span {
-			padding: 4px 15px 8px;
+			padding: 0;
 		}
 	}
 	h2 {
@@ -456,6 +452,8 @@ input[type="search"]::-webkit-search-decoration {
 		}
 	}
 }
+
+.spare.wrapper:extend(.container) {}
 
 .twitter-profile-pic {
 	width: 60px;
@@ -475,11 +473,14 @@ input[type="search"]::-webkit-search-decoration {
 
 //  Navigation
 .template-nav {
-	border: solid 1px @borders-blocks;
+	text-align: right;
 	background-color: @background-blocks;
 }
 
 .widget .extendednavigation {
+	ul {
+		float: right;
+	}
 	li > .text {
 		padding: 0;
 	}
@@ -553,13 +554,9 @@ input[type="search"]::-webkit-search-decoration {
 
 
 // Page
-.home-feature {
-	padding-top: 30px;
-}
-
 .widget.feature .feature-bgimg .content,
 .widget.feature .feature-bgimg {
-	height: 360px;
+	height: 570px;
 }
 
 // Footer
@@ -785,7 +782,7 @@ input[type="search"]::-webkit-search-decoration {
 	font-family: inherit;
 }
 
-.template-nav .widget.ecombasket {
+.template-header .widget.ecombasket {
 	display: inline;
 	float: right;
 	.ecombasket-list-container {
@@ -834,94 +831,52 @@ input[type="search"]::-webkit-search-decoration {
 	border-bottom: 1px solid @borders-blocks;
 }
 
+.header-phone {
+	text-align: right;
+}
+
+.header-details {
+	padding: 10px 0;
+	background-color: @color-swatch3;
+	color: @color-swatch1;
+}
+
 // Content
 .widget.content {
 	clear: both;
 }
 
+// Footer
+.footer-wrap {
+	clear: both;
+	background: @color-swatch5;
+}
+
+.template-footer .widget.profile .bk-profile-socialicons span {
+	background-color: @color-swatch3;
+	margin-right: 5px;
+	a {
+		background-color: @color-swatch3;
+		margin: 0;
+	}
+}
+
+.template-footer {
+	color: @color-swatch1;
+	a {
+		color: @color-swatch1;
+	}
+	h3 {
+		border-bottom: 1px solid @borders-blocks;
+		padding-bottom: 1px;
+		margin-bottom: 10px;
+	}
+}
+
+
 // Misc
-/* SVG Icons */
-.svg .widget.socialicons span.bk-socialicons-twitter a,
-.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a {
-	background-image: image('/images/social/socialicons-twitter.svg');
-}
 
-.svg .widget.socialicons span.bk-socialicons-linkedin a,
-.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-linkedin a {
-	background-image: image('/images/social/socialicons-linkedin.svg')
-}
-
-.svg .widget.socialicons span.bk-socialicons-facebook a,
-.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-facebook a {
-	background-image: image('/images/social/socialicons-facebook.svg')
-}
-
-.svg .widget.socialicons span.bk-socialicons-rss a,
-.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-rss a {
-	background-image: image('/images/social/socialicons-rss.svg')
-}
-
-.svg .widget.socialicons span.bk-socialicons-googleplus a,
-.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-googleplus a {
-	background-image: image('/images/social/socialicons-googleplus.svg')
-}
-
-.svg .widget.socialicons span.bk-socialicons-youtube a,
-.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-youtube a {
-	background-image: image('/images/social/socialicons-youtube.svg')
-}
-
-.svg .widget.paypalbuynow .widget.button.paypal {
-	background-image: image('/images/social/socialicons-paypal.svg')
-}
-.svg .widget.tweet a {
-	background-image: image('/images/social/socialicons-twitter.svg')
-}
-.svg .widget.dropbox button {
-	background-image: image('/images/social/socialicons-dropbox.svg')
-}
-	
-/* PNG Icons */
-.widget.socialicons span.bk-socialicons-twitter a,
-.widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a {
-	background-image: image('/images/social/socialicons-twitter.png');
-}
-
-.widget.socialicons span.bk-socialicons-linkedin a,
-.widget.profile .bk-profile-socialicons span.bk-socialicons-linkedin a {
-	background-image: image('/images/social/socialicons-linkedin.png')
-}
-
-.widget.socialicons span.bk-socialicons-facebook a,
-.widget.profile .bk-profile-socialicons span.bk-socialicons-facebook a {
-	background-image: image('/images/social/socialicons-facebook.png')
-}
-
-.widget.socialicons span.bk-socialicons-rss a,
-.widget.profile .bk-profile-socialicons span.bk-socialicons-rss a {
-	background-image: image('/images/social/socialicons-rss.png')
-}
-
-.widget.socialicons span.bk-socialicons-googleplus a,
-.widget.profile .bk-profile-socialicons span.bk-socialicons-googleplus a {
-	background-image: image('/images/social/socialicons-googleplus.png')
-}
-
-.widget.socialicons span.bk-socialicons-youtube a,
-.widget.profile .bk-profile-socialicons span.bk-socialicons-youtube a {
-	background-image: image('/images/social/socialicons-youtube.png')
-}
-
-.widget.paypalbuynow .widget.button.paypal {
-	background-image: image('/images/social/socialicons-paypal.png')
-}
-.widget.tweet a {
-	background-image: image('/images/social/socialicons-twitter.png')
-}
-.widget.dropbox button {
-	background-image: image('/images/social/socialicons-dropbox.png')
-}
-
+// Mobile
 @media @tablet {
 	.header-logo {
 		padding-top: 10px;
@@ -970,8 +925,6 @@ input[type="search"]::-webkit-search-decoration {
 				}
 			}
 		}
-	}
-	.widget.companyname {
 	}
 	.page-wrap {
 		padding: 20px;
