@@ -924,6 +924,7 @@ input[type="search"]::-webkit-search-decoration {
 .footer-wrap {
 	clear: both;
 	background: @color-swatch5;
+	border-bottom: 40px solid darken(@color-swatch5, 20%);
 }
 
 .template-footer .widget.profile .bk-profile-socialicons span {
@@ -985,18 +986,20 @@ input[type="search"]::-webkit-search-decoration {
 		padding-top: 10px;
 	}
 	.widget .extendednavigation a.pull {
-		left: 10px;
-		right: auto;
-		top: 19px;
+		right: 10px;
+		top: -32px;
 		&:after {
 			right: 7px;
 			background-color: @color-swatch2;
 			box-shadow: 0 6px 0 @color-swatch2, 0 12px 0 @color-swatch2;
 		}
 	}
+	.header-details, .header-phone {
+		text-align: center;
+		
+	}
 	.template-nav {
 		position: relative;
-		min-height: 57px;
 		&:before {
 			display: none;
 		}
@@ -1007,9 +1010,6 @@ input[type="search"]::-webkit-search-decoration {
 		}
 	}
 	.widget .extendednavigation {
-		ul {
-			padding-top: 56px;
-		}
 		ul li {
 			padding: 0;
 			border-bottom: 1px solid @borders-blocks;
@@ -1029,8 +1029,21 @@ input[type="search"]::-webkit-search-decoration {
 			}
 		}
 	}
+	.widget.feature {
+		text-align: center;
+	}
+	.widget.feature .feature-bgimg .content, .widget.feature .feature-bgimg {
+		height: 400px;
+	}
 	.page-wrap {
 		padding: 20px;
+	}
+	.row {
+		padding: 10px;
+	}
+	.ecom-productslist-products {
+		padding: 0;
+		margin: 0;
 	}
 	.section.main h3 {
 		margin: 0 8px;
