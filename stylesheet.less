@@ -916,6 +916,11 @@ input[type="search"]::-webkit-search-decoration {
 	}
 }
 
+.widget.ecomproductslist .productlist-display-form .form-group,
+.widget.ecomproductslist .productlist-item-count .form-group {
+	margin-bottom: 0;
+}
+
 // Content
 .widget.content {
 	clear: both;
@@ -996,8 +1001,21 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 // Misc
+@media (max-width: 960px) {
+	.page-wrap, .template-header, .template-footer {
+		padding-left: 20px;
+		padding-right: 20px;
+	}	
+}
 
 // Mobile
+@media @mobile {
+	select {
+		width: 100%;
+	}
+}
+
+// Tablet
 @media @tablet {
 	.header-logo {
 		padding-top: 10px;
@@ -1051,9 +1069,6 @@ input[type="search"]::-webkit-search-decoration {
 	}
 	.widget.feature .feature-bgimg .content, .widget.feature .feature-bgimg {
 		height: 400px;
-	}
-	.page-wrap {
-		padding: 20px;
 	}
 	.row {
 		padding: 10px;
