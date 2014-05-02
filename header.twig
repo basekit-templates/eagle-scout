@@ -5,7 +5,9 @@
 				{{widget('twitter', 'twitterwidget', {'searchKey': 'basekit', 'searchType': 'username', 'count': '1','refreshTime': '1800000','includeRts': '0'})|raw}}
 			</div>
 			<div class="header-basket span-4">
-				{{widget('ecombasket', 'ecombasket', {})|raw}}
+				{% if page.request != 'checkout' %}
+					{{widget('ecombasket', 'ecombasket', {})|raw}}
+				{% endif %}
 			</div>
 		</div>
 	</div>
