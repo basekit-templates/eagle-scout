@@ -2,14 +2,14 @@
 {% block content %}
 
 <header class="home-feature">
-	{{widget('feature', 'featurewidget', {"header": "LOREM IPSUM", "strapline":"Maecenas libero purus, pharetra ornare", "buttonText":"MAECENAS","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true})|raw}}
+	{{widget('feature', 'featurewidget', {"header": "profile", "strapline":"profile", "buttonText":"MAECENAS","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true})|raw}}
 </header>
 
 <div class="container">
 	<section class="section main home-page">
-		{{widget('content', 'maintitle', {content: '<h2>NEWEST RANGE</h2>'})|raw}}
+		{{widget('content', 'maintitle', {content: '<h2>LOREM IPSUM</h2>'})|raw}}
 		{{widget('ecomproductslist', 'ecomproductslist', {})|raw}}
-{# 		{{zone('main')|raw}} #}
+		{{zone('main')|raw}}
 	</section>
 </div>
 
