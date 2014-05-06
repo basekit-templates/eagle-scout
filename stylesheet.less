@@ -241,25 +241,6 @@ a,
 	}
 }
 
-.widget.ecomproductslist .ecom-productslist-product {
-	margin-right: 0;
-	zoom: 1;
-	margin-left: 1.33%;
-	float: left;
-	max-width: 100%;
-	width: 31.990000000000002%;
-}
-
-.ecom-productslist-products {
-	margin-left: -1.33%;
-	clear: both;
-	zoom: 1;
-}
-
-.widget.ecomproductslist {
-	margin-left: 0;
-}
-
 .contactform button.btn,
 button.btn,
 .widget.profile form button,
@@ -793,6 +774,32 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 // Ecommerce
+.widget.ecomproductslist .ecom-productslist-product {
+	margin-right: 0;
+	zoom: 1;
+	margin-left: 1.33%;
+	float: left;
+	max-width: 100%;
+	width: 31.990000000000002%;
+}
+
+.ecom-productslist-products {
+	margin-left: -1.33%;
+	clear: both;
+	zoom: 1;
+}
+
+.widget.ecomproductslist {
+	margin-left: 0;
+}
+
+.widget.ecomproductslist .ecom-productslist-image-wrap {
+	border: 1px solid @borders-blocks;
+	&:hover {
+		border-color: darken(@borders-blocks, 10%);
+	}
+}
+
 .checkout-amount,
 .checkout-pricepu {
 	font-weight: @font-swatch4-font-weight;
