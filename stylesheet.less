@@ -385,6 +385,9 @@ input[type=search],
 .signupform fieldset input {
 	border-right: none;
 	vertical-align: middle;
+	padding-right: 47px;
+	margin-right: -45px;
+	width: 100%;
 	&:hover, &:focus {
 		border: 1px solid @borders-blocks;
 		border-right: none;
@@ -444,7 +447,8 @@ input[type="search"]::-webkit-search-decoration {
 
 .widget.tweet a,
 .widget.paypalbuynow .widget.button.paypal,
-.widget.dropbox button {
+.widget.dropbox button,
+.ctc-wrap a {
 	padding-left: 40px;
 	padding-right: 16px;
 	display: inline-block;
@@ -524,6 +528,10 @@ input[type="search"]::-webkit-search-decoration {
 	ul li {
 		padding-bottom: 5px;
 	}
+}
+
+.widget.companyname {
+	float: left;
 }
 
 //  Navigation
@@ -978,6 +986,10 @@ input[type="search"]::-webkit-search-decoration {
 	}
 }
 
+.page-wrap {
+	padding-bottom: 20px;
+}
+
 // Footer
 .footer-wrap {
 	clear: both;
@@ -1037,17 +1049,21 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 // Misc
+.ctc-wrap a {
+	background-image: image('/images/icon-phone.png');
+	background-repeat: no-repeat;
+	background-position: 14px;
+	background-size: 18px;
+}
+
+.svg .ctc-wrap a {
+	background-image: image('/images/icon-phone.svg');
+}
+
 @media (max-width: 960px) {
 	.page-wrap, .template-header, .template-footer {
 		padding-left: 20px;
 		padding-right: 20px;
-	}	
-}
-
-// Mobile
-@media @mobile {
-	select {
-		width: 100%;
 	}
 }
 
@@ -1068,6 +1084,9 @@ input[type="search"]::-webkit-search-decoration {
 	.header-details, .header-phone {
 		text-align: center;
 		
+	}
+	.widget.companyname {
+		padding-right: 60px;
 	}
 	.template-nav {
 		position: relative;
@@ -1134,6 +1153,24 @@ input[type="search"]::-webkit-search-decoration {
 		.ecom-productslist-product,
 		.ecom-productslist-products {
 			margin-left: 0;
+			width: 100%;
+		}
+	}
+	.productlist-display-form {
+		label {
+			display: inline-block;
+			width: 19%;
+		}
+		select {
+			width: 80%;
+		}
+	}
+}
+
+// Mobile
+@media @mobile {
+	.productlist-display-form {
+		select, label {
 			width: 100%;
 		}
 	}
