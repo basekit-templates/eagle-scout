@@ -66,7 +66,7 @@
 @borders-blocks: darken(@color-swatch1, 5%);
 @borders-buttons: lighten(desaturate(@color-swatch2, 40%), 40%);
 @borders-buttons-hover: lighten(desaturate(@color-swatch2, 40%), 30%);
-@background-blocks: lighten(@color-swatch1, 20%);
+@background-blocks: lighten(@color-swatch2, 40%);
 @text-links-hover: darken(@color-swatch6, 20%);
 
 // 1. Globals
@@ -302,7 +302,6 @@ button.btn:disabled:hover,
 
 .widget.ecomcheckout table tr td .checkout-quantitybtn {
 	border: 1px solid @borders-blocks;
-	background: @background-blocks;
 }
 
 .clicktocall a {
@@ -338,7 +337,6 @@ textarea,
 .widget.profile form fieldset input {
 	text-indent: 0;
 	padding: 8px 9px 10px;
-	background-color: @background-blocks;
 	border: 1px solid @borders-blocks;
 	outline: none;
 	-webkit-transition: border .2s;
@@ -402,17 +400,14 @@ input[type=search],
 .signupform fieldset button {
 	border: 1px solid @borders-blocks;
 	border-left: none;
-	background-color: @background-blocks;
 	background-image: image('/images/mail.png');
+	background-color: none;
 	background-position: center;
 	height: 44px;
 	padding: 8px 9px 10px;
 	text-indent: -300px;
 	overflow: hidden;
 	min-width: 45px;
-	&:hover {
-		background-color: @background-blocks;
-	}
 }
 
 .svg .signupform fieldset button {
@@ -542,7 +537,6 @@ input[type="search"]::-webkit-search-decoration {
 //  Navigation
 .template-nav {
 	text-align: right;
-	background-color: @background-blocks;
 	z-index: 1;
 }
 
@@ -551,7 +545,6 @@ input[type="search"]::-webkit-search-decoration {
 		padding: 0;
 	}
 	ul li:hover ul {
-		background-color: @background-blocks;
 		top: 55px;
 		left: -1px;
 		a {
@@ -752,25 +745,23 @@ input[type="search"]::-webkit-search-decoration {
 	}
 }
 
-.menu-subsection {
+.menu .menu-subsection {
 	border: 1px solid @borders-blocks;
+	padding: 0;
+}
+.menu-subsection-promoted, .menu-item-promoted {
 	background-color: @background-blocks;
-	&:before, &:after {
-		width: 90px;
-	}
-	&:before {
-		margin-right: -46px;
-	}
-	&:after {
-		margin-left: -46px;
-	}
+}
+.menu-item-promoted .inner-item,
+.menu-subsection-wrapper {
+	padding: 20px;
 }
 
 .menu .menu-section-item-dietary-props .dietary-icon,
 .menu .menu-info .dietary-icon,
 .dietary-icon {
 	border: 1px solid @borders-blocks;
-	background-color: @background-blocks;
+	background-color: @color-swatch1;
 	margin-right: 7px;
 	padding: 0 4px;
 }
@@ -930,7 +921,6 @@ input[type="search"]::-webkit-search-decoration {
 .ecom-productslist-product {
 	overflow: hidden;
 	position: relative;
-	background-color: @background-blocks;
 }
 .ecom-productlist-info {
 	min-height: 120px;
