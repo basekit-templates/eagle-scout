@@ -63,7 +63,7 @@
 	=============================== */
 
 // Mixins
-@borders-blocks: darken(@color-swatch1, 5%);
+@borders-blocks: darken(@color-swatch1, 7%);
 @borders-buttons: lighten(desaturate(@color-swatch2, 40%), 40%);
 @borders-buttons-hover: lighten(desaturate(@color-swatch2, 40%), 30%);
 @background-blocks: lighten(@color-swatch2, 40%);
@@ -822,7 +822,8 @@ input[type="search"]::-webkit-search-decoration {
 	margin-left: 0;
 }
 
-.widget.ecomproductslist .ecom-productslist-image-wrap {
+.widget.ecomproductslist .ecom-productslist-image-wrap,
+.ecom-featuredproducts-image-wrap {
 	border: 1px solid @borders-blocks;
 	&:hover {
 		border-color: darken(@borders-blocks, 10%);
