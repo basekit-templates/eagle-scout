@@ -237,7 +237,7 @@ a,
 	text-decoration: none;
 	color: @color-swatch2;
 	&:hover {
-		text-decoration: none;
+		text-decoration: underline;
 	}
 }
 
@@ -343,8 +343,10 @@ textarea,
 	-moz-transition: border .2s;
 	-ms-transition: border .2s;
 	transition: border .2s;
+	background-color: @color-swatch1;
 	&:hover, &:focus {
 		border: 1px solid darken(@borders-blocks, 20%);
+		background-color: @color-swatch1;
 	}
 }
 
@@ -401,13 +403,16 @@ input[type=search],
 	border: 1px solid @borders-blocks;
 	border-left: none;
 	background-image: image('/images/mail.png');
-	background-color: none;
+	background-color: @color-swatch1;
 	background-position: center;
 	height: 44px;
 	padding: 8px 9px 10px;
 	text-indent: -300px;
 	overflow: hidden;
 	min-width: 45px;
+	&:hover {
+		background-color: @color-swatch1;
+	}
 }
 
 .svg .signupform fieldset button {
