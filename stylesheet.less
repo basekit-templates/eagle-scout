@@ -350,6 +350,13 @@ textarea,
 	}
 }
 
+.widget.ecomproductslist .productlist-filter .productlist-display-form .form-group.productlist-search input {
+	@media @mobile {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+}
+
 select::-ms-expand {
 	display: none;
 }
@@ -803,6 +810,12 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 // Ecommerce
+
+.widget.ecomproductslist .productlist-filter {
+	margin-left: 0;
+}
+
+
 .widget.ecomproductslist .ecom-productslist-product {
 	margin-right: 0;
 	zoom: 1;
@@ -828,6 +841,10 @@ input[type="search"]::-webkit-search-decoration {
 	&:hover {
 		border-color: darken(@borders-blocks, 10%);
 	}
+}
+
+.widget.ecomproductslist .productlist-pagination {
+margin-left: 1.33%;
 }
 
 .widget.ecomproduct .ecom-product .btn.ecom-product-add-to-cart-btn {
@@ -857,6 +874,20 @@ input[type="search"]::-webkit-search-decoration {
 	}
 }
 
+.widget.ecombasket .ecombasket-pull p:hover {
+	text-decoration: underline;
+}
+
+.page-wrap .widget.ecombasket .ecombasket-pull {
+	text-align: left;
+	p {
+		padding: 20px 0;
+		&:before {
+			position: relative;
+		}
+	}
+}
+
 .widget.ecombasket .ecombasket-pull p:before {
 	background-image: image('/images/basket.png');
 	height: 35px;
@@ -872,11 +903,18 @@ input[type="search"]::-webkit-search-decoration {
 
 .widget.ecombasket {
 	clear: both;
+	@media @tablet {
+		width: 100%;
+	}
 	.ecombasket-pull {
 		width: auto;
 		padding: 0;
 		display: inline-block;
 		background-color: transparent;
+		text-align: right;
+		@media @tablet {
+			display: block;
+		}
 		&:hover {
 			background-color: transparent;
 		}
@@ -895,7 +933,7 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 .ecombasket-list-container {
-	z-index: 1;
+	z-index: 2;
 	position: absolute;
 	top: 100%;
 	left: -1px;
@@ -903,7 +941,13 @@ input[type="search"]::-webkit-search-decoration {
 	padding: 10px;
 	border: 1px solid @borders-blocks;
 	width: 260px;
+	@media @tablet {
+		position: relative;
+		width: 100%;
+		margin-bottom: 20px;
+	}
 }
+
 
 .widget.ecomcheckout table tr th, .widget.ecomcheckout table tr td {
 	border-bottom: 1px solid @borders-blocks;
