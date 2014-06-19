@@ -845,7 +845,9 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 .widget.ecomproductslist .ecom-productslist-image-wrap,
-.ecom-featuredproducts-image-wrap {
+.ecom-featuredproducts-image-wrap,
+.widget.ecomproduct .ecom-product .ecom-product-preview-image-wrap {
+	background-size: contain;
 	border: 1px solid @borders-blocks;
 	&:hover {
 		border-color: darken(@borders-blocks, 10%);
