@@ -356,12 +356,7 @@ select::-ms-expand {
 	display: none;
 }
 
-.widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select,
-select {
-	-moz-appearance: none;
-	text-indent: 0.01px;
-	text-overflow: '';
-}
+
 
 .widget.profile form fieldset input,
 input[type=email],
@@ -426,7 +421,7 @@ textarea {
 }
 
 
-.widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select
+.widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select, 
 select {
 	cursor: pointer;
 	-webkit-appearance: none;
@@ -439,11 +434,13 @@ select {
 	background-position-y: 53%;
 	margin-bottom: 12px;
 	padding-right: 33px;
+
 }
 
 .svg {
 	.widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select, select {
 		background-image: image('/images/arrow-down.svg');
+		-webkit-appearance: none;
 	}
 }
 
