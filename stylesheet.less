@@ -186,6 +186,10 @@ h6 {
 	}
 }
 
+hr.line {
+	color: lighten(@color-swatch4, 40%);
+}
+
 .widget.companyname {
 	font-family:@font-swatch10-font-family;
 	font-weight: @font-swatch10-font-weight;
@@ -219,13 +223,16 @@ select {
 }
 
 blockquote {
+	font-color: @color-swatch7;
 	font-style: italic;
 	font-size: bkscale(@font-swatch5-font-size, 1.2);
 	line-height: bkscale(@font-swatch5-line-height, 1.2);
 	background-color: @color-swatch3;
+	padding: 1.8em 1.8em 1.8em 2.75em;
 	&:before {
 		left: 8px;
-		color: @color-swatch2;
+		color: darken(@color-swatch3, 70%);
+		top: 35px;
 	}
 }
 
@@ -251,8 +258,6 @@ button.btn,
 .clicktocall a,
 .signupform fieldset button,
 .blog-search-form button,
-.widget.socialicons span a,
-.widget.profile .bk-profile-socialicons span a,
 .widget.feature .feature-bgimg .content button,
 .template-footer .widget.profile .bk-profile-socialicons span a,
 .blog-search-form button,
@@ -275,6 +280,9 @@ button.btn,
 	-moz-transition: .2s;
 	-ms-transition: .2s;
 	transition: .2s;
+	@media @mobile {
+		width: 100%;
+	}
 	&:hover {
 		background-color: @font-swatch7-background-color-hover;
 	}
@@ -318,6 +326,9 @@ form button {
 
 .form-group {
 	padding-bottom: 10px;
+	@media @mobile {
+		padding: 0;
+	}
 }
 
 .widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select,
@@ -339,6 +350,9 @@ textarea,
 	-ms-transition: border .2s;
 	transition: border .2s;
 	background-color: @color-swatch1;
+	@media @mobile {
+		width: 100%;
+	}
 	&:hover, &:focus {
 		border: 1px solid darken(@borders-blocks, 20%);
 		background-color: @color-swatch1;
@@ -348,7 +362,6 @@ textarea,
 .widget.ecomproductslist .productlist-filter .productlist-display-form .form-group.productlist-search input {
 	@media @mobile {
 		width: 100%;
-		margin-bottom: 20px;
 	}
 }
 
@@ -375,6 +388,10 @@ input[type=search],
 	button[type=submit] {
 		width: 70px;
 		padding: 10px 18px;
+		@media @mobile {
+			margin-top: 6px;
+			width: 100%;
+		}
 	}
 }
 
@@ -456,6 +473,9 @@ input[type="search"]::-webkit-search-decoration {
 	padding-right: 16px;
 	display: inline-block;
 	margin: 0;
+	@media @mobile {
+		text-align: center;
+	}
 }
 
 .widget.tweet {
@@ -514,6 +534,10 @@ input[type="search"]::-webkit-search-decoration {
 	}
 	h3 {
 		border-bottom: none;
+		@media @mobile {
+			font-size: bkscale(@font-swatch9-font-size, 0.85);
+			line-height: bkscale(@font-swatch9-font-size, 0.9);
+		}
 		span {
 			padding-top: 5px;
 		}
@@ -798,19 +822,43 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 // Blog
+
+.blog-search-submit-button {
+	@media @mobile {
+		margin-top: 10px;
+	}
+}
+
 .blog-post-feature-image-wrap {
 	height: 400px;
 	margin-bottom: 10px;
+	@media @mobile {
+		height: 300px;
+	}
 }
 
 .blog-post-metadata {
-	padding: 12px 18px 14px;
+	padding: 12px 18px 14px 0;
 	margin-top: 15px;
 }
 
 .blog-post-item {
 	padding-bottom: 30px;
 }
+
+.blog-post-category-label, .blog-post-tags-label {
+	&:after {
+		content: ":";
+		position: relative;
+	}
+}
+
+.blog-post-sharing .btn {
+	@media @mobile{
+		margin-bottom: 12px;
+	}
+}
+
 
 // Ecommerce
 
