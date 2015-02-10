@@ -21,7 +21,7 @@
 
 /*	===============================
 	Colour Swatches
-	===============================	
+	===============================
 	"color1": == Background
 	"color2": == Contrast colour
 	"color3": == Button colour
@@ -34,7 +34,7 @@
 
 /*	===============================
 	Font Swatches
-	===============================	
+	===============================
 	"font1":  == Heading 1
 	"font2":  == Heading 2
 	"font3":  == Heading 3
@@ -63,7 +63,7 @@
 	=============================== */
 
 // Mixins
-@borders-blocks: darken(@color-swatch1, 7%);
+@borders-blocks: darken(@color-swatch1, 10%);
 @borders-buttons: lighten(desaturate(@color-swatch2, 40%), 40%);
 @borders-buttons-hover: lighten(desaturate(@color-swatch2, 40%), 30%);
 @background-blocks: lighten(@color-swatch2, 40%);
@@ -78,75 +78,75 @@ html, body {
 	line-height:@font-swatch5-line-height;
 	letter-spacing: @font-swatch5-letter-spacing;
 	font-size: @font-swatch5-font-size;
-	
+
 	-webkit-font-smoothing: antialiased;
 }
 
 h1 {
-	font-family:@font-swatch1-font-family; 
-	font-weight: @font-swatch1-font-weight; 
-	color:@font-swatch1-color; 
-	line-height:@font-swatch1-line-height; 
-	letter-spacing: @font-swatch1-letter-spacing; 
+	font-family:@font-swatch1-font-family;
+	font-weight: @font-swatch1-font-weight;
+	color:@font-swatch1-color;
+	line-height:@font-swatch1-line-height;
+	letter-spacing: @font-swatch1-letter-spacing;
 	font-size: @font-swatch1-font-size;
 	a {
-		font-family:@font-swatch1-font-family; 
-		font-weight: @font-swatch1-font-weight; 
-		line-height:@font-swatch1-line-height; 
-		letter-spacing: @font-swatch1-letter-spacing; 
+		font-family:@font-swatch1-font-family;
+		font-weight: @font-swatch1-font-weight;
+		line-height:@font-swatch1-line-height;
+		letter-spacing: @font-swatch1-letter-spacing;
 		font-size: @font-swatch1-font-size;
 		color: @color-swatch2;
 	}
 }
 
 h2 {
-	font-family:@font-swatch2-font-family; 
-	font-weight: @font-swatch2-font-weight; 
-	color:@font-swatch2-color; 
-	line-height:@font-swatch2-line-height; 
-	letter-spacing: @font-swatch2-letter-spacing; 
+	font-family:@font-swatch2-font-family;
+	font-weight: @font-swatch2-font-weight;
+	color:@font-swatch2-color;
+	line-height:@font-swatch2-line-height;
+	letter-spacing: @font-swatch2-letter-spacing;
 	font-size: @font-swatch2-font-size;
-	
+
 	position: relative;
 	a {
-		font-family:@font-swatch2-font-family; 
-		font-weight: @font-swatch2-font-weight; 
-		line-height:@font-swatch2-line-height; 
-		letter-spacing: @font-swatch2-letter-spacing; 
+		font-family:@font-swatch2-font-family;
+		font-weight: @font-swatch2-font-weight;
+		line-height:@font-swatch2-line-height;
+		letter-spacing: @font-swatch2-letter-spacing;
 		font-size: @font-swatch2-font-size;
 		color: @color-swatch2;
 	}
 }
 
 h3 {
-	font-family:@font-swatch3-font-family; 
-	font-weight: @font-swatch3-font-weight; 
-	color:@font-swatch3-color; 
-	line-height:@font-swatch3-line-height; 
-	letter-spacing: @font-swatch3-letter-spacing; 
+	font-family:@font-swatch3-font-family;
+	font-weight: @font-swatch3-font-weight;
+	color:@font-swatch3-color;
+	line-height:@font-swatch3-line-height;
+	letter-spacing: @font-swatch3-letter-spacing;
 	font-size: @font-swatch3-font-size;
 	a {
-		font-family:@font-swatch3-font-family; 
-		font-weight: @font-swatch3-font-weight; 
-		line-height:@font-swatch3-line-height; 
-		letter-spacing: @font-swatch3-letter-spacing; 
+		font-family:@font-swatch3-font-family;
+		font-weight: @font-swatch3-font-weight;
+		line-height:@font-swatch3-line-height;
+		letter-spacing: @font-swatch3-letter-spacing;
 		font-size: @font-swatch3-font-size;
 		color: @color-swatch2;
 	}
 }
 
 h4 {
-	font-family:@font-swatch4-font-family; 
-	font-weight: @font-swatch4-font-weight; 
-	color:@font-swatch4-color; 
-	line-height:@font-swatch4-line-height; 
-	letter-spacing: @font-swatch4-letter-spacing; 
+	font-family:@font-swatch4-font-family;
+	font-weight: @font-swatch4-font-weight;
+	color:@font-swatch4-color;
+	line-height:@font-swatch4-line-height;
+	letter-spacing: @font-swatch4-letter-spacing;
 	font-size: @font-swatch4-font-size;
 	a {
-		font-family:@font-swatch4-font-family; 
-		font-weight: @font-swatch4-font-weight; 
-		line-height:@font-swatch4-line-height; 
-		letter-spacing: @font-swatch4-letter-spacing; 
+		font-family:@font-swatch4-font-family;
+		font-weight: @font-swatch4-font-weight;
+		line-height:@font-swatch4-line-height;
+		letter-spacing: @font-swatch4-letter-spacing;
 		font-size: @font-swatch4-font-size;
 		color: @color-swatch2;
 	}
@@ -220,20 +220,6 @@ select {
 	line-height:@font-swatch5-line-height;
 	letter-spacing: @font-swatch5-letter-spacing;
 	font-size: @font-swatch5-font-size;
-}
-
-blockquote {
-	font-color: @color-swatch7;
-	font-style: italic;
-	font-size: bkscale(@font-swatch5-font-size, 1.2);
-	line-height: bkscale(@font-swatch5-line-height, 1.2);
-	background-color: @color-swatch3;
-	padding: 1.8em 1.8em 1.8em 2.75em;
-	&:before {
-		left: 8px;
-		color: darken(@color-swatch3, 70%);
-		top: 35px;
-	}
 }
 
 a,
@@ -350,6 +336,7 @@ textarea,
 	-ms-transition: border .2s;
 	transition: border .2s;
 	background-color: @color-swatch1;
+	margin: 5px 0;
 	@media @mobile {
 		width: 100%;
 	}
@@ -386,7 +373,7 @@ input[type=search],
 		margin-right: -70px;
 	}
 	button[type=submit] {
-		width: 70px;
+		min-width: 100px;
 		padding: 10px 18px;
 		@media @mobile {
 			margin-top: 6px;
@@ -402,35 +389,23 @@ input[type=search],
 }
 
 .signupform fieldset input {
-	border-right: none;
 	vertical-align: middle;
 	padding-right: 47px;
 	margin-right: -45px;
 	width: 100%;
 	&:hover, &:focus {
 		border: 1px solid @borders-blocks;
-		border-right: none;
 	}
 }
 
 .signupform fieldset button {
 	border: 1px solid @borders-blocks;
-	border-left: none;
-	background-image: image('/images/mail.png');
 	background-color: @color-swatch1;
-	background-position: center;
+	color: @font-swatch5-color;
 	height: 44px;
-	padding: 8px 9px 10px;
-	text-indent: -300px;
-	overflow: hidden;
-	min-width: 45px;
 	&:hover {
-		background-color: @color-swatch1;
+		background-color: darken(@color-swatch1,10%);
 	}
-}
-
-.svg .signupform fieldset button {
-	background-image: image('/images/mail.svg');
 }
 
 textarea {
@@ -438,7 +413,7 @@ textarea {
 }
 
 
-.widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select, 
+.widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select,
 select {
 	cursor: pointer;
 	-webkit-appearance: none;
@@ -1027,7 +1002,7 @@ margin-left: 1.33%;
 
 
 
-.widget.ecomproductslist .productlist-display-form, 
+.widget.ecomproductslist .productlist-display-form,
 .widget.ecomproductslist .productlist-item-count {
 	zoom: 1;
 	margin-left: 1.33%;
@@ -1059,7 +1034,7 @@ margin-left: 1.33%;
 			border: 1px solid @borders-blocks;
 			padding: 14px 20px;
 			color: @color-swatch6;
-			line-height: inherit; 
+			line-height: inherit;
 			font-size: inherit;
 			-webkit-transition: .2s;
 			-moz-transition: .2s;
@@ -1145,7 +1120,7 @@ margin-left: 1.33%;
                     display: block;
                     padding: 10px 0 0 0;
                 }
-            }            
+            }
         }
 
         // Table Head
@@ -1172,7 +1147,7 @@ margin-left: 1.33%;
                 padding: 0 0 10px 0;
                 margin: 0 0 10px 0;
             }
-            
+
 
             td {
                 border-bottom: 1px solid fade(@color-swatch5,8%);
@@ -1273,7 +1248,7 @@ margin-left: 1.33%;
                             background-color: @font-swatch7-background-color-hover;
                         }
 
-                   
+
 
                         @media @mobile {
                             width: 30px;
@@ -1478,7 +1453,7 @@ margin-left: 1.33%;
 	}
 	.header-details, .header-phone {
 		text-align: center;
-		
+
 	}
 	.widget.companyname {
 		padding-right: 60px;
@@ -1536,7 +1511,7 @@ margin-left: 1.33%;
 		}
 	}
 	.widget.ecomproductslist {
-		.productlist-display-form, 
+		.productlist-display-form,
 		.productlist-item-count,
 		.ecom-productslist-product,
 		.ecom-productslist-products {
