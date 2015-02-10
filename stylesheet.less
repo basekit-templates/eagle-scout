@@ -278,6 +278,8 @@ button.btn,
 .widget.profile .bk-profile-socialicons span a,
 .widget.socialicons span a {
 	padding: 0;
+	text-indent: 9999px;
+	overflow: hidden;
 }
 
 button:disabled,
@@ -346,11 +348,20 @@ textarea,
 	}
 }
 
-.widget.ecomproductslist .productlist-filter .productlist-display-form .form-group.productlist-search input {
-	@media @mobile {
-		width: 100%;
+.widget.ecomproductslist .productlist-filter .productlist-display-form .form-group.productlist-search {
+	input {
+		@media @tablet {
+			width: 100%;
+		}
+	}
+
+	label {
+		@media @tablet {
+				display: block;
+		}
 	}
 }
+
 
 select::-ms-expand {
 	display: none;
@@ -388,23 +399,9 @@ input[type=search],
 	overflow: hidden;
 }
 
-.signupform fieldset input {
-	vertical-align: middle;
-	padding-right: 47px;
-	margin-right: -45px;
-	width: 100%;
-	&:hover, &:focus {
-		border: 1px solid @borders-blocks;
-	}
-}
-
 .signupform fieldset button {
-	border: 1px solid @borders-blocks;
-	background-color: @color-swatch1;
-	color: @font-swatch5-color;
-	height: 44px;
 	&:hover {
-		background-color: darken(@color-swatch1,10%);
+		background-color: lighten(@font-swatch7-background-color-hover,5%);
 	}
 }
 
@@ -501,7 +498,7 @@ input[type="search"]::-webkit-search-decoration {
 	}
 	h2 {
 		margin-bottom: 10px;
-		border: 5px solid @font-swatch2-color;
+		border: 5px solid @font-swatch8-color;
 		border-left: none;
 		border-right: none;
 		display: inline-block;
@@ -543,6 +540,12 @@ input[type="search"]::-webkit-search-decoration {
 	}
 }
 
+.widget.twitter .twitter-profile-pic {
+	@media @mobile {
+		float: none;
+	}
+}
+
 
 //  Navigation
 .template-nav {
@@ -557,6 +560,7 @@ input[type="search"]::-webkit-search-decoration {
 	ul li:hover ul {
 		top: 55px;
 		left: -1px;
+				box-shadow: 2px 2px 5px fade(@color-swatch5,20%);
 		a {
 			padding: 8px 20px;
 		}
@@ -602,10 +606,42 @@ input[type="search"]::-webkit-search-decoration {
 	min-height: 1px;
 }
 
+.header-details .bk-profile-address p {
+	color: @color-swatch1;
+	display: inline-block;
+
+	&:after {
+		content:" ";
+	}
+
+}
+
 .header-details {
 	padding: 10px 0;
 	background-color: @color-swatch3;
 	color: @color-swatch1;
+
+		.row {
+		display: -moz-box;
+	    display: -ms-flexbox;
+	    display: -webkit-flex;
+	    display: flex;
+
+		-webkit-box-align: center;
+		-moz-box-align: center;
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
+		}
+
+		.header-text.span-6,
+		.header-phone.span-6 {
+			-webkit-box-flex: 1;
+			-moz-box-flex: 1;
+			-webkit-flex: 1 1 auto;
+			-ms-flex: 1 1 auto;
+			flex: 1 1 auto;
+		}
 }
 
 // Page
@@ -834,21 +870,49 @@ input[type="search"]::-webkit-search-decoration {
 	}
 }
 
-
+// ----------
 // Ecommerce
+// ----------
+
+// Filters
 
 .widget.ecomproductslist .productlist-filter {
 	margin-left: 0;
+	.clearfix;
+
+	.productlist-display-form {
+		label {
+			@media @tablet {
+				display: block;
+			}
+		}
+
+		select {
+			@media @tablet {
+				width: 100%;
+			}
+		}
+	}
+
+	.productlist-display-form .form-group {
+		@media @tablet {
+			margin-bottom: 0;
+		}
+	}
 }
 
-
-.widget.ecomproductslist .ecom-productslist-product {
+.widget.ecomproductslist .ecom-productslist-product,
+.widget.ecomfeaturedproductslist .ecom-productslist-product {
 	margin-right: 0;
 	zoom: 1;
 	margin-left: 1.33%;
 	float: left;
 	max-width: 100%;
 	width: 31.990000000000002%;
+}
+
+.widget.ecomfeaturedproducts .ecom-featuredproducts-wrap .ecom-featuredproducts-product {
+	margin-left: 1.33%;
 }
 
 .ecom-productslist-products {
@@ -1418,6 +1482,14 @@ margin-left: 1.33%;
 	}
 }
 
+
+
+// Profile Widgets
+
+.bk-profile-address p {
+	color: @color-swatch1;
+}
+
 // Misc
 .ctc-wrap a {
 	background-image: image('/images/icon-phone.png');
@@ -1443,8 +1515,8 @@ margin-left: 1.33%;
 		padding-top: 10px;
 	}
 	.widget .extendednavigation a.pull {
-		right: 10px;
-		top: -32px;
+		right: 0px;
+		top: 0px;
 		&:after {
 			right: 7px;
 			background-color: @color-swatch2;
@@ -1517,15 +1589,6 @@ margin-left: 1.33%;
 		.ecom-productslist-products {
 			margin-left: 0;
 			width: 100%;
-		}
-	}
-	.productlist-display-form {
-		label {
-			display: inline-block;
-			width: 19%;
-		}
-		select {
-			width: 80%;
 		}
 	}
 }
