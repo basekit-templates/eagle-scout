@@ -1,0 +1,21 @@
+// ------------------------------
+// Mixins
+// ------------------------------
+
+
+// Colours
+@borders-blocks: darken(@color-swatch1, 10%);
+@borders-buttons: lighten(desaturate(@color-swatch2, 40%), 40%);
+@borders-buttons-hover: lighten(desaturate(@color-swatch2, 40%), 30%);
+@background-blocks: lighten(@color-swatch2, 40%);
+@text-links-hover: darken(@color-swatch6, 20%);
+
+@border-alt: @color-swatch5;
+
+// Transitions
+.transition(@duration:0.2s, @ease:ease-out) {
+  -webkit-transition: all @duration @ease;
+  -moz-transition: all @duration @ease;
+  -o-transition: all @duration @ease;
+  transition: all @duration @ease;
+}

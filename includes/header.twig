@@ -1,0 +1,38 @@
+<header class="template-header">
+	<div class="header-sub container">
+		<div class="row">
+			<div class="header-twitter">
+				{{widget('twitter', 'twitterwidget', {'searchKey': 'basekit', 'searchType': 'username', 'count': '1','refreshTime': '1800000','includeRts': '0'})|raw}}
+			</div>
+			<div class="header-basket">
+				{% if page.request != 'checkout' %}
+					{{widget('ecombasket', 'ecombasket', {})|raw}}
+				{% endif %}
+			</div>
+		</div>
+	</div>
+
+	<div class="keyline"></div>
+
+	<div class="header-main container">
+			<div class="header-title">
+				{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+				{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+			</div>
+			<nav class="template-nav">
+				{{widget('extendednavigation', 'navigationheader', {"align":"right"})|raw}}
+			</nav>
+	</div>
+	<div class="header-details">
+		<div class="container">
+			<div class="row">
+				<div class="header-text span-6">
+					{{widget('content', 'offers', {content: 'LOREM IPSUM DOLOR SIT AMET'})|raw}}
+				</div>
+				<div class="header-phone span-6">
+					{{widget('profile', 'contactnumber', { 'profileType':'phone'})|raw}}
+				</div>
+			</div>
+		</div>
+	</div>
+</header>

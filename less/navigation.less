@@ -1,0 +1,85 @@
+// -----------------------
+// Extended Navigation
+// -----------------------
+
+
+.template-nav {
+    text-align: right;
+    z-index: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+.widget .extendednavigation {
+    li > .text {
+        padding: 0;
+    }
+
+    ul {
+        padding-top: 0;
+    }
+
+    ul li:hover ul {
+        top: 55px;
+        left: -1px;
+        box-shadow: 2px 2px 5px fade(@color-swatch5,20%);
+        a {
+            padding: 8px 20px;
+        }
+    }
+    ul li a:hover, ul li.folder:hover > .text, ul li ul a:hover .text, ul li.folder .text:hover {
+        color: @text-links-hover;
+    }
+    ul li.folder:hover:after {
+        border-top-color: @text-links-hover;
+    }
+    > ul > li {
+        a, &.folder {
+            padding: 14px 20px 15px;
+        }
+        &.folder {
+            padding-right: 30px;
+            margin-right: 0;
+            &:after {
+                right: 12px;
+                top: 46%;
+            }
+        }
+    }
+}
+
+
+// Tablet Styles
+@media @tablet {
+
+    // Pull button
+    .widget .extendednavigation a.pull {
+        right: 0px;
+        top: 0px;
+        &:after {
+            right: 7px;
+            background-color: @color-swatch2;
+            box-shadow: 0 6px 0 @color-swatch2, 0 12px 0 @color-swatch2;
+        }
+    }
+
+    .widget .extendednavigation {
+         ul li {
+             padding: 0;
+             border-bottom: 1px solid @borders-blocks;
+         }
+         > ul > li {
+             border-right: 0;
+             &.folder:after {
+                 right: 20px;
+                 top: 47%;
+             }
+             &:hover ul {
+                 top: 40px;
+                 left: 0;
+                 a {
+                     padding: 14px 20px 15px;
+                 }
+             }
+         }
+     }
+}

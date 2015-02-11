@@ -2,25 +2,25 @@
 <html lang="{{ page.seoLang }}">
 
 	<head>
-		{% include "head.twig" %}
-		
+		{% include "includes/head.twig" %}
+
 		{% include basekit.headScript %}
 	</head>
 
 	<body class="{{ page.backgroundClass }} {{ site.colorSwatch }}">
-	
-		{% include "header.twig" %}
-		
-		
+
+		{% include "includes/header.twig" %}
+
+
 		<div class="page-wrap">
-			
+
 			{% block content %}
 			{% endblock %}
 
 		</div>
 
-		{% include "footer.twig" %}
-		
+		{% include "includes/footer.twig" %}
+
 		<script type="text/javascript">
 			!function() {
 				function supportsSVG() {
