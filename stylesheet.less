@@ -454,7 +454,76 @@ input[type="search"]::-webkit-search-decoration {
 	padding: 0;
 }
 
+
+
+
+// --------------------
 // Header
+// --------------------
+
+// Styles Added FEB 2015
+// ---------------------
+
+// Applies flexbox to the two containers within the header
+// to vertically align them
+.header-details {
+	padding: 10px 0;
+	background-color: @color-swatch3;
+	color: @color-swatch1;
+
+		.row {
+		display: -moz-box;
+	    display: -ms-flexbox;
+	    display: -webkit-flex;
+	    display: flex;
+
+		-webkit-box-align: center;
+		-moz-box-align: center;
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
+		}
+
+		.header-text.span-6,
+		.header-phone.span-6 {
+			-webkit-box-flex: 1;
+			-moz-box-flex: 1;
+			-webkit-flex: 1 1 auto;
+			-ms-flex: 1 1 auto;
+			flex: 1 1 auto;
+		}
+}
+
+
+// Header Details
+// ---------------------
+
+// Fixes profile signup form in the header
+.header-details {
+
+	.form-group {
+		padding-bottom: 0;
+	}
+
+		.widget.profile, .widget.signupform {
+		input[type=email] {
+			width: inherit;
+			margin-right: 0;
+		}
+	}
+
+
+// Profile Widget Fixes
+
+	.twitter-content {
+		p {
+			color: @background-color;
+		}
+	}
+}
+
+
+
 .template-header {
 	padding-top: 30px;
 	background-color: @color-swatch7;
@@ -616,33 +685,8 @@ input[type="search"]::-webkit-search-decoration {
 
 }
 
-.header-details {
-	padding: 10px 0;
-	background-color: @color-swatch3;
-	color: @color-swatch1;
 
-		.row {
-		display: -moz-box;
-	    display: -ms-flexbox;
-	    display: -webkit-flex;
-	    display: flex;
 
-		-webkit-box-align: center;
-		-moz-box-align: center;
-		-webkit-align-items: center;
-		-ms-flex-align: center;
-		align-items: center;
-		}
-
-		.header-text.span-6,
-		.header-phone.span-6 {
-			-webkit-box-flex: 1;
-			-moz-box-flex: 1;
-			-webkit-flex: 1 1 auto;
-			-ms-flex: 1 1 auto;
-			flex: 1 1 auto;
-		}
-}
 
 // Page
 .widget.feature .feature-bgimg .content,
