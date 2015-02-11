@@ -482,6 +482,12 @@ input[type="search"]::-webkit-search-decoration {
 		-webkit-align-items: center;
 		-ms-flex-align: center;
 		align-items: center;
+
+		// Back to normal at mobile
+		@media @mobile {
+			display: block;
+		}
+
 		}
 
 		.header-text.span-6,
@@ -510,6 +516,10 @@ input[type="search"]::-webkit-search-decoration {
 		input[type=email] {
 			width: inherit;
 			margin-right: 0;
+
+			@media @mobile {
+				width: 100%;
+			}
 		}
 	}
 
@@ -564,11 +574,6 @@ input[type="search"]::-webkit-search-decoration {
 		width: 100%;
 		float: none;
 	}
-
-	// @media @mobile {
-	// 	width: 100%;
-	// 	float: none;
-	// }
 }
 
 
