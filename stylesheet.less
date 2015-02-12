@@ -785,6 +785,11 @@ input[type="search"]::-webkit-search-decoration {
     -ms-flex-align: start;
     align-items: flex-start;
 
+    @media @mobile {
+    	display: block;
+    	text-align: center;
+    }
+
 	// Changes twitter profile colour to white
 	.twitter-content {
 		p {
@@ -801,6 +806,14 @@ input[type="search"]::-webkit-search-decoration {
 	.signupform fieldset label {
 		margin-bottom: 0;
 	}
+
+	// Signup Form
+	.widget.signupform input[type=email] {
+		@media @mobile {
+			padding-right: 0;
+			margin-right: 0;
+		}
+	}
 }
 
 .footer-content {
@@ -812,6 +825,11 @@ input[type="search"]::-webkit-search-decoration {
 
     	margin-right: 20px;
     	max-width: 50%;
+
+    	@media @mobile {
+    		margin-right: 0;
+			max-width: 100%;
+    	}
 }
 
 .footer-profile {
@@ -823,6 +841,11 @@ input[type="search"]::-webkit-search-decoration {
 
     	margin-left: 20px;
     	max-width: 50%;
+
+    	@media @mobile {
+    		margin-left: 0;
+			max-width: 100%;
+    	}
 }
 
 .footer-wrap {
