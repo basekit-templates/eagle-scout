@@ -437,9 +437,7 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 .header-main {
-	padding: 30px 0;
-	margin-top: 30px;
-	margin-bottom: 30px;
+	padding: 20px 0;
 	min-height: 120px;
 
 	display: -moz-box;
@@ -489,12 +487,10 @@ input[type="search"]::-webkit-search-decoration {
 // Applies flexbox to the two containers within the header
 // to vertically align them
 .header-details {
-	padding: 10px;
+	padding: 6px 0;
 	background-color: @color-swatch3;
-	color: @color-swatch1;
-	line-height: 35px;
 
-		.row {
+	.row {
 		display: -moz-box;
 	    display: -ms-flexbox;
 	    display: -webkit-flex;
@@ -511,29 +507,30 @@ input[type="search"]::-webkit-search-decoration {
 			display: block;
 		}
 
+	}
+	.header-text,
+	.header-phone {
+		-webkit-box-flex: 1;
+		-moz-box-flex: 1;
+		-webkit-flex: 1 1 40%;
+		-ms-flex: 1 1 40%;
+		flex: 1 1 40%;
+		@media @mobile {
+			text-align: right;
 		}
+	}
+}
 
-		.header-text.span-6,
-		.header-phone.span-6 {
-			-webkit-box-flex: 1;
-			-moz-box-flex: 1;
-			-webkit-flex: 1 1 40%;
-			-ms-flex: 1 1 40%;
-			flex: 1 1 40%;
-
-
-			// Profile paragraph colour to white
-			p {
-				padding-bottom: 0;
-				line-height: 35px;
-				color: @color-swatch1;
-			}
-
-			@media @mobile {
-				width: 100%;
-				text-align: center;
-			}
-		}
+// Make all headings white
+.header-details {
+	h1, h2, h3, h4, p, .bk-profile-phone {
+		font-family: @font-swatch5-font-family;
+		line-height: @font-swatch5-line-height;
+		color: @color-swatch1;
+		font-size: 16px;
+		line-height: 24px;
+		padding-bottom: 0;
+	}
 }
 
 
@@ -547,6 +544,10 @@ input[type="search"]::-webkit-search-decoration {
 
 	.form-group {
 		padding-bottom: 0;
+	}
+
+	.widget.profile form {
+		margin: 5px 0;
 	}
 
 		.widget.profile, .widget.signupform {
