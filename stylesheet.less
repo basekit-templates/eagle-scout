@@ -133,7 +133,8 @@ button.btn,
 .blog-search-form button,
 .widget.ecombasket .ecombasket-list-container .ecombasket-summary-wrap .ecombasket-summary-link,
 .widget.ecombasketsummary table tr td .checkout-quantitybtn button,
-.widget.ecombasketsummary .checkout-order-button {
+.widget.ecombasketsummary .checkout-order-button
+.btn ecom-product-go-to-checkout-btn {
 	border: 0;
 	cursor: pointer;
 	background-color: @font-swatch7-background-color;
@@ -152,6 +153,7 @@ button.btn,
 	transition: .2s;
 	&:hover {
 		background-color: @font-swatch7-background-color-hover;
+		text-decoration: none;
 	}
 }
 
@@ -924,120 +926,3 @@ input[type="search"]::-webkit-search-decoration {
 // ------------------------------
 //  Inherited Styles
 // ------------------------------
-
-
-// // Content
-// .widget.content {
-// 	clear: both;
-// }
-
-// .main > .widget.content {
-// 	padding-bottom: 40px;
-// 	h2 {
-// 		position: relative;
-// 		&:after {
-// 			content: "";
-// 			position: absolute;
-// 			bottom: 0;
-// 			left: 0;
-// 			height: 4px;
-// 			width: 35px;
-// 			background: @font-swatch2-color;
-// 		}
-// 	}
-// }
-
-// .page-wrap {
-// 	padding-bottom: 20px;
-// }
-
-
-
-
-
-
-
-// // Tablet
-// @media @tablet {
-// 	.header-logo {
-// 		padding-top: 10px;
-// 	}
-
-// 	.header-details, .header-phone {
-// 		text-align: center;
-
-// 	}
-// 	.widget.companyname {
-// 		padding-right: 60px;
-// 	}
-// 	.template-nav {
-// 		position: relative;
-// 		&:before {
-// 			display: none;
-// 		}
-// 		.widget.ecombasket {
-// 			position: absolute;
-// 			top: 0;
-// 			right: 0;
-// 		}
-// 	}
-// 	.widget .extendednavigation {
-// 		ul li {
-// 			padding: 0;
-// 			border-bottom: 1px solid @borders-blocks;
-// 		}
-// 		> ul > li {
-// 			border-right: 0;
-// 			&.folder:after {
-// 				right: 20px;
-// 				top: 47%;
-// 			}
-// 			&:hover ul {
-// 				top: 40px;
-// 				left: 0;
-// 				a {
-// 					padding: 14px 20px 15px;
-// 				}
-// 			}
-// 		}
-// 	}
-// 	.widget.feature {
-// 		text-align: center;
-// 	}
-// 	.widget.feature .feature-bgimg .content, .widget.feature .feature-bgimg {
-// 		height: 400px;
-// 	}
-// 	.row {
-// 		padding: 10px;
-// 	}
-// 	.ecom-productslist-products {
-// 		padding: 0;
-// 		margin: 0;
-// 	}
-// 	.section.main h3 {
-// 		margin: 0 8px;
-// 	}
-// 	.menu-subsection {
-// 		&:before, &:after {
-// 			display: none;
-// 		}
-// 	}
-// 	.widget.ecomproductslist {
-// 		.productlist-display-form,
-// 		.productlist-item-count,
-// 		.ecom-productslist-product,
-// 		.ecom-productslist-products {
-// 			margin-left: 0;
-// 			width: 100%;
-// 		}
-// 	}
-// }
-
-// // Mobile
-// @media @mobile {
-// 	.productlist-display-form {
-// 		select, label {
-// 			width: 100%;
-// 		}
-// 	}
-// }
