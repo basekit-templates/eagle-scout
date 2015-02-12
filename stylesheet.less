@@ -510,9 +510,16 @@ input[type="search"]::-webkit-search-decoration {
 		.header-phone.span-6 {
 			-webkit-box-flex: 1;
 			-moz-box-flex: 1;
-			-webkit-flex: 1 1 auto;
-			-ms-flex: 1 1 auto;
-			flex: 1 1 auto;
+			-webkit-flex: 1 1 40%;
+			-ms-flex: 1 1 40%;
+			flex: 1 1 40%;
+
+
+			// Profile paragraph colour to white
+			p {
+				padding-bottom: 0;
+				color: @color-swatch1;
+			}
 
 			@media @mobile {
 				width: 100%;
