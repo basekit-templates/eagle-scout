@@ -185,6 +185,13 @@ button.btn:disabled:hover {
 }
 
 
+// Contact form button fix to match the rest of the forms
+
+.contactform button.btn {
+	margin-top: -15px;
+}
+
+
 
 // ------------------------------
 //	3. #Forms
@@ -206,9 +213,9 @@ form button {
 .widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select,
 select,
 input,
-input[type=email],
-input[type=text],
-input[type=search],
+// input[type=email],
+// input[type=text],
+// input[type=search],
 textarea,
 .contactform input,
 .contactform textarea,
@@ -249,8 +256,6 @@ input[type=search],
 .widget.profile, .widget.signupform {
 	input[type=email] {
 		width: 100%;
-		padding-right: 74px;
-		margin-right: -70px;
 	}
 	button[type=submit] {
 		min-width: 100px;
@@ -743,6 +748,14 @@ input[type="search"]::-webkit-search-decoration {
 
 
 // Blog
+
+.blog-search-form label {
+	display: block;
+}
+
+.blog-search-form input {
+	width: 100%;
+}
 
 .blog-search-submit-button {
 	@media @mobile {
