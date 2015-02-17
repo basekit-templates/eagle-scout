@@ -30,6 +30,10 @@
         top: 55px;
         left: -1px;
         box-shadow: 2px 2px 5px fade(@color-swatch5,20%);
+
+        width: auto;
+        white-space: normal;
+
         a {
             padding: 8px 20px;
         }
@@ -59,7 +63,8 @@
 // Fixes wordwrap on ie issue
 .widget .extendednavigation ul li.folder .text,
 .widget .navigation ul li.folder .text {
-    -ms-word-break: break-word;
+        -ms-word-break: initial;
+        word-break: initial;
 }
 
 // Tablet Styles
