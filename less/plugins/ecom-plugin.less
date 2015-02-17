@@ -147,9 +147,19 @@
         border: none;
         text-indent: 999px;
         overflow: hidden;
+        background-repeat: no-repeat;
 
         background-color: transparent;
         background-image: image('/images/close.png');
+
+        // Positioning on a mobile device
+        @media @tablet {
+            margin-left: 95%;
+        }
+
+        @media @mobile {
+            margin: 0 auto;
+        }
 
     }
     .svg .ecombasket-remove-button {
