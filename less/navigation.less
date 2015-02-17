@@ -56,6 +56,12 @@
 }
 
 
+// Fixes wordwrap on ie issue
+.widget .extendednavigation ul li.folder .text,
+.widget .navigation ul li.folder .text {
+    -ms-word-break: break-word;
+}
+
 // Tablet Styles
 @media @tablet {
 
