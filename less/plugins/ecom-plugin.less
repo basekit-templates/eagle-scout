@@ -16,12 +16,19 @@
 
         select {
             height: 44px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            border-radius: 0;
             @media @tablet {
                 width: 100%;
             }
         }
 
         input {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            border-radius: 0;
+
             @media @tablet {
                 width: 100%;
             }
@@ -101,6 +108,15 @@
         letter-spacing: bkscale(@font-swatch2-letter-spacing, 0.7);
         font-size: bkscale(@font-swatch2-font-size, 0.7);
     }
+}
+
+
+
+// Product Item
+// ------------
+
+.ecom-product-long-description {
+    margin: 10px 0;
 }
 
 
