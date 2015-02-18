@@ -60,12 +60,15 @@
     }
 }
 
+.widget .extendednavigation ul li.folder .text,
+.widget .navigation ul li.folder .text
+
 
 // Fixes wordwrap on ie issue
 .widget .extendednavigation ul li.folder .text,
 .widget .navigation ul li.folder .text {
-        -ms-word-break: break-word;
-        word-break: break-word;
+        -ms-word-break: keep-all;
+        word-break: keep-all;
 }
 
 // Tablet Styles
