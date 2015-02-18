@@ -184,17 +184,6 @@ button.btn:disabled:hover {
 }
 
 
-// Contact form button fix to match the rest of the forms
-
-.widget.contactform .form-group:nth-child(2) {
-	padding-bottom:0;
-}
-
-.contactform textarea {
-	margin: 0;
-	margin-top: 10px;
-}
-
 
 
 // ------------------------------
@@ -229,7 +218,7 @@ textarea,
 	-ms-transition: border .2s;
 	transition: border .2s;
 	background-color: @color-swatch1;
-	margin: 5px 0;
+	margin: 10px 0;
 	@media @mobile {
 		width: 100%;
 	}
@@ -325,6 +314,17 @@ input[type="search"]::-webkit-search-decoration {
 
 .widget.tweet {
 	padding: 0;
+}
+
+
+// Contact form button fix to match the rest of the forms
+.widget.contactform .form-group:nth-child(2) {
+	padding-bottom: 7px;
+}
+
+.contactform textarea {
+	margin: 0;
+	margin-top: 10px;
 }
 
 
