@@ -1,5 +1,6 @@
 {
 	"name":"Eagle Scout",
+	"versionTenCompatible": 1,
 	"thumbnail":"thumbnail.png",
 	"screenshot":"eagle-scout-screenshot.jpg",
 	"templateType":"ecommerce",
