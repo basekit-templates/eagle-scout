@@ -6,167 +6,190 @@
 #migrated-site {
 
 
-// Stylseheet overrides
-// -----------------------------
+  // Stylseheet overrides
+  // -----------------------------
 
 
-// Template wrapper (replace with corresponding template classes)
-.page-wrap .container{
-  width: 100%;
-  max-width: 100%;
-  margin: 0;
-}
-  
-// Main content spacing (replace with corresponding template class)
-.container {
-  padding: 0;
-}
-
-.header-sub.container {
-    padding-bottom: 10px;
-}
-
-.header-main.container {
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-.container.template-footer {
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-// Widget overflow to allow 10S overlays to display correctly
-.widget.content {
-  overflow: inherit;
-}
-
-.row {
-    width: 100%;
-}
-
-
-// fix footer
-.template-footer h3:before, .template-footer h3:after {
-    width: 100%;
-    @media @mobile {
-      width: 50%;
-    }
-}
-
-
-// Migration styles
-// -----------------------------
-
-
-// Replace with corresponding template values
-@container-width: 960px;
-
-@spacing__first--desktop: 70px;
-@spacing__first--tablet:  70px;
-@spacing__first--mobile:  70px;
-
-@spacing--other: 30px;
-
-
-.section.main.home-page {
-    padding-top: 0;
-    padding-bottom: 0;
-}
-
-.section.main.default-page {
-    padding-top: 0;
-    padding-bottom: 0;
-}
-
-.home-feature .widget.feature {
-    padding-bottom: 0;
-}
-
-// Applies spacing to widgets to mimic container width
-.empty-zone,
-#page-zones__main:empty,
-#page-zones__main > .widget:not(.row),
-.row:not(.widget):not(.row--width-no-padding) .row__container {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: @container-width;
-  width: 90%;
-}
-
-
-// Move spacing to first widget in the main zone (not sections)
-&.edit #page-zones__main-overlay + .widget:not(.row),
-#page-zones__main > .widget:not(.row):first-child {
-  margin-top: @spacing__first--desktop;
-
-  @media @tablet {
-    margin-top: @spacing__first--tablet;
+  // Template wrapper (replace with corresponding template classes)
+  .page-wrap .container{
+    width: 960px;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 10px;
   }
-  @media @mobile {
-    margin-top: @spacing__first--mobile;
-  }
-}
 
-// Move spacing to first widget in the main zone for default pages (not sections)
-&.edit .section.main.default-page #page-zones__main-overlay + .widget:not(.row),
-.section.main.default-page #page-zones__main > .widget:not(.row):first-child {
-  margin-top: 30px;
-}
-
-
-// Move spacing to last widget in the main zone (not sections)
-#page-zones__main > .widget:not(.row):last-child {
-  margin-bottom: 45px;
-}
-
-
-// Add spacing to the top of a widget when it follows a section
-#page-zones__main > .row + .widget:not(.row) {
-  margin-top: @spacing--other;
-}
-
-
-// Remove spacing if widget follows a light section (change to dark if template has a dark BG)
-#page-zones__main > .row.style--light + .widget:not(.row) {
-  margin-top: 0;
-}
-
-
-// Adds spacing to the section when a widget is before it
-#page-zones__main > .widget:not(.row) + .row {
-  margin-bottom: @spacing--other;
-  margin-top: @spacing--other;
-
-  &:not(:last-child) {
-       margin-bottom: 0;
-  }
-}
-
-// Header basket
-.header-basket .widget.ecombasket  .ecombasket-pull {
-    display: block;
-}
-
-// Header twitter
-.header-twitter .widget.twitter ul {
+  // Main content spacing (replace with corresponding template class)
+  .container {
     padding: 0;
-    margin: 0;
-    display: block;
-}
-.header-twitter .widget.twitter ul li {
-    margin: 0;
-    padding: 0 0 5px 0;
-    display: block;
-}
-.header-twitter .widget.twitter ul li .twitter-profile-pic {
-    float: left;
-    margin-right: 20px;
-    padding: 6px 0 0 0;
-    width: 60px;
-}
-.header-twitter .widget.twitter ul li .twitter-content {
-    margin-left: 0;
-}
+  }
+
+  .header-sub.container {
+      padding-bottom: 10px;
+  }
+
+  .header-main.container {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 10px;
+      padding-right: 10px;
+  }
+
+  .container.template-footer {
+      padding-top: 30px;
+      padding-bottom: 30px;
+  }
+
+  // Widget overflow to allow 10S overlays to display correctly
+  .widget.content {
+    overflow: inherit;
+  }
+
+  .row {
+      width: 100%;
+      padding-left: 10px;
+      padding-right: 10px;
+  }
+
+
+  // fix footer
+  .template-footer h3:before, .template-footer h3:after {
+      width: 100%;
+      @media @mobile {
+        width: 50%;
+      }
+  }
+
+
+  // Migration styles
+  // -----------------------------
+
+
+  // Replace with corresponding template values
+  @container-width: 960px;
+
+  @spacing__first--desktop: 70px;
+  @spacing__first--tablet:  70px;
+  @spacing__first--mobile:  70px;
+
+  @spacing--other: 30px;
+
+
+  .section.main.home-page {
+      padding-top: 0;
+      padding-bottom: 0;
+  }
+
+  .section.main.default-page {
+      padding-top: 0;
+      padding-bottom: 0;
+  }
+
+  .home-feature .widget.feature {
+      padding-bottom: 0;
+  }
+
+  // Applies spacing to widgets to mimic container width
+  .empty-zone,
+  #page-zones__main:empty,
+  #page-zones__main > .widget:not(.row),
+  .row:not(.widget):not(.row--width-no-padding) .row__container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: @container-width;
+    width: 90%;
+  }
+
+
+  // Move spacing to first widget in the main zone (not sections)
+  &.edit #page-zones__main-overlay + .widget:not(.row),
+  #page-zones__main > .widget:not(.row):first-child {
+    margin-top: @spacing__first--desktop;
+
+    @media @tablet {
+      margin-top: @spacing__first--tablet;
+    }
+    @media @mobile {
+      margin-top: @spacing__first--mobile;
+    }
+  }
+
+  // Move spacing to first widget in the main zone for default pages (not sections)
+  &.edit .section.main.default-page #page-zones__main-overlay + .widget:not(.row),
+  .section.main.default-page #page-zones__main > .widget:not(.row):first-child {
+    margin-top: 30px;
+  }
+
+
+  // Move spacing to last widget in the main zone (not sections)
+  #page-zones__main > .widget:not(.row):last-child {
+    margin-bottom: 45px;
+  }
+
+
+  // Add spacing to the top of a widget when it follows a section
+  #page-zones__main > .row + .widget:not(.row) {
+    margin-top: @spacing--other;
+  }
+
+
+  // Remove spacing if widget follows a light section (change to dark if template has a dark BG)
+  #page-zones__main > .row.style--light + .widget:not(.row) {
+    margin-top: 0;
+  }
+
+
+  // Adds spacing to the section when a widget is before it
+  #page-zones__main > .widget:not(.row) + .row {
+    margin-bottom: @spacing--other;
+    margin-top: @spacing--other;
+
+    &:not(:last-child) {
+         margin-bottom: 0;
+    }
+  }
+
+  // Header basket
+  .header-basket .widget.ecombasket  .ecombasket-pull {
+      display: block;
+  }
+
+  // Header twitter
+  .header-twitter .widget.twitter ul {
+      padding: 0;
+      margin: 0;
+      display: block;
+  }
+  .header-twitter .widget.twitter ul li {
+      margin: 0;
+      padding: 0 0 5px 0;
+      display: block;
+  }
+  .header-twitter .widget.twitter ul li .twitter-profile-pic {
+      float: left;
+      margin-right: 20px;
+      padding: 6px 0 0 0;
+      width: 60px;
+  }
+  .header-twitter .widget.twitter ul li .twitter-content {
+      margin-left: 0;
+  }
+
+  .template-footer h3 {
+    width: 32%;
+  }
+
+  h2.basket-summary-title {
+    border: 2px solid @color-swatch3 !important;
+  }
+
+  table.basket-summary-items-table {
+    border-right: 2px solid @color-swatch3 !important;
+    border-left: 2px solid @color-swatch3 !important;
+    border-bottom: 2px solid @color-swatch3 !important;
+  }
 
 } // End of #migrated-site
+
+.edit .container {
+  width: 100% !important;
+}
