@@ -46,10 +46,12 @@
 
   .row {
       width: 100%;
-      padding-left: 10px;
-      padding-right: 10px;
   }
 
+  .row--background-overlay {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 
   // fix footer
   .template-footer h3:before, .template-footer h3:after {
@@ -188,8 +190,21 @@
     border-bottom: 2px solid @color-swatch3 !important;
   }
 
+  .template-nav {
+    z-index: 2;
+  }
+
+  .ecombasket-list-container {
+    z-index: 3;
+  }
+
 } // End of #migrated-site
 
 .edit .container {
   width: 100% !important;
+}
+
+.edit .row {
+  padding-left: 10px;
+  padding-right: 10px;
 }
